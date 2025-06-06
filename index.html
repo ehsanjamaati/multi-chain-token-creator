@@ -8,8 +8,12 @@
   <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.41.0/lib/index.iife.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@0.3.6/lib/index.iife.min.js"></script>
 </head>
+
 <body>
   <h1>Multi-Chain Token Creator</h1>
+
+  <button id="connectWallet">🔌 Connect Wallet</button>
+  <p id="walletAddress"></p>
 
   <label for="network">Select Network:</label>
   <select id="network">
@@ -41,7 +45,6 @@
 
   <pre id="output"></pre>
 
-  <script src="erc20ABI.json" type="application/json" id="erc20ABI"></script>
   <script src="main.js"></script>
 </body>
 </html>
