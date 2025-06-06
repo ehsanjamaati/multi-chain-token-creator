@@ -1,49 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Multi-Chain Token Creator</title>
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.41.0/lib/index.iife.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@0.3.6/lib/index.iife.min.js"></script>
 </head>
-
 <body>
-  <h1>Multi-Chain Token Creator</h1>
+  <h1>ساخت توکن با قرارداد فکتوری</h1>
 
-  <button id="connectWallet">🔌 Connect Wallet</button>
-  <p id="walletAddress"></p>
+  <button id="connectWallet">🔌 اتصال کیف پول</button>
+  <p id="walletAddress" style="font-weight:bold; margin-top:10px;"></p>
 
-  <label for="network">Select Network:</label>
-  <select id="network">
-    <option value="ethereum">Ethereum (ERC-20)</option>
-    <option value="solana">Solana (SPL)</option>
+  <label for="network">شبکه (فعلاً فقط اتریوم تست Goerli):</label>
+  <select id="network" disabled>
+    <option value="goerli" selected>Goerli Testnet</option>
   </select>
 
   <div>
-    <label for="name">Token Name:</label>
+    <label for="name">نام توکن:</label>
     <input type="text" id="name" />
   </div>
 
   <div>
-    <label for="symbol">Token Symbol:</label>
+    <label for="symbol">نماد توکن:</label>
     <input type="text" id="symbol" />
   </div>
 
   <div>
-    <label for="decimals">Decimals:</label>
+    <label for="decimals">تعداد اعشار:</label>
     <input type="number" id="decimals" value="18" />
   </div>
 
   <div>
-    <label for="supply">Total Supply:</label>
+    <label for="supply">مقدار کل عرضه:</label>
     <input type="number" id="supply" />
   </div>
 
-  <button id="createToken">Create Token</button>
+  <button id="createToken">ساخت توکن</button>
 
-  <pre id="output"></pre>
+  <pre id="output" style="background:#eee; padding:10px; margin-top:15px;"></pre>
 
   <script src="main.js"></script>
 </body>
